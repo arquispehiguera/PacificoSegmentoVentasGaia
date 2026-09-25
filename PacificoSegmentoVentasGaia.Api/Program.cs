@@ -165,7 +165,12 @@ try
 
     app.UseMiddleware<LogEnrichmentMiddleware>();
     app.UseMiddleware<ExceptionHandlingMiddleware>();
-    app.UseHttpsRedirection();
+    // Local development runs over plain HTTP (IIS Express / Kestrel "http" profile). Redirecting
+    // there sends Swagger UI to a different origin (https + SSL port) and the browser blocks it.
+    if (!app.Environment.IsDevelopment())
+    {
+        app.UseHttpsRedirection();
+    }
     app.UseAuthentication();
     app.UseAuthorization();
     app.MapControllers();
