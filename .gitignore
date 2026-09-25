@@ -483,3 +483,6 @@ $RECYCLE.BIN/
 
 # Local secrets (real values live only on each machine)
 appsettings.Development.json
+
+# Local tooling artifacts
+.atl/
