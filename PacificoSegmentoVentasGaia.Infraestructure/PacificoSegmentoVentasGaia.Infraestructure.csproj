@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Dapper" Version="2.1.66" />
+		<PackageReference Include="Microsoft.Data.SqlClient" Version="6.1.3" />
+		<PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="9.0.0" />
+		<PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="9.0.0" />
+		<PackageReference Include="Polly" Version="8.4.2" />
+	</ItemGroup>
+	
+	<ItemGroup>
+		<ProjectReference Include="..\PacificoSegmentoVentasGaia.Domain\PacificoSegmentoVentasGaia.Domain.csproj" />
+		<ProjectReference Include="..\PacificoSegmentoVentasGaia.Application\PacificoSegmentoVentasGaia.Application.csproj" />
+	</ItemGroup>
+</Project>
